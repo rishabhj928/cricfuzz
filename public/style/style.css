@@ -1,0 +1,110 @@
+body{
+    background-image: url(../images/back.jpg);
+    margin: 0;
+    padding: 0;
+}
+.card:hover{
+    background-color: #185414
+}
+#a1{
+    color: #185414;
+}
+.loader {
+    border: 15px solid #f3f3f3; /* Light grey */
+    border-top: 15px solid #3498db; /* Blue */
+    border-bottom: 15px solid #3498db;
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    animation: spin 0.7s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.outerDiv{
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid grey;
+    background-color: rgb(200, 200, 200);
+}
+.headerDiv{
+    text-align: center;
+    background-color: rgb(222, 222, 222);
+}
+.lab{
+    font-family: "Monaco",sans-serif;
+    color: rgb(95, 39, 141);
+    align-content: center;
+    align-items: center;
+    align-self: center;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    background: #d3cbcb;
+    height: 60px;
+    width: 100%;
+}
+.footer .container{
+    line-height: 60px;
+    text-decoration: none;
+    color: #352cb1
+}
+.btn{
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+    border: none;
+    border-radius: 2px;
+    font-weight: 600;
+}
+.text{
+    width: 100%;
+    background-color: rgb(221, 219, 219);
+    color: #4287f5;
+    font-family: "Monaco",sans-serif;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    margin: 4px 2px;
+}
+.header {
+    width: 100%;
+    overflow: hidden;
+    background-color: #d3cbcb;
+    height: 10%;
+}
+.header-right {
+    margin-top: -65px;
+    float: right;
+}
+.abc{
+    border: 1px solid grey;
+}
+.header h4 {
+    margin-top: 17px;
+    margin-right: 8.5px;
+    float: left;
+    color: blue;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+}
+.header h2 {
+    color: green;
+    margin-left: 50px;
+    margin-top: 17px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.header h4:hover {
+    background-color: #ddd;
+    color: green;
+    cursor: pointer;
+}
+.header h4.active {
+    background-color: dodgerblue;
+    color: rgb(236, 223, 223);
+}
