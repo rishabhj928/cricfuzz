@@ -4,4 +4,4 @@ About: This website uses api from cricapi.com, fetches cricket matches and their
 
 Visit: https://cricfuzz.herokuapp.com/
 
-# Credits: Rishabh Jain
+Credits: Rishabh Jain
