@@ -1,7 +1,7 @@
-# cricfuzz
+# Cricfuzz
 
-This website uses api from cricapi.com, fetches cricket matches and their live scores.
+About: This website uses api from cricapi.com, fetches cricket matches and their live scores.
 
-Visit https://cricfuzz.herokuapp.com/ to view application.
+Visit: https://cricfuzz.herokuapp.com/
 
-credits: Rishabh Jain
+#credits: Rishabh Jain
