@@ -13,7 +13,7 @@ app.use(bodyparser.urlencoded({     // to support URL-encoded bodies
 }));
 app.use(express.static('./public'))
 
-var key = "hoCXaD0KtpcRjjnFZTA3Wn6IDYJ2"
+var key = process.env.API_KEY
 app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname + '/public/index.html'))
 })
