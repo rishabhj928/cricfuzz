@@ -4,7 +4,7 @@ body{
     padding: 0;
 }
 .card:hover{
-    background-color: #185414
+    background-color: #84ad80;
 }
 #a1{
     color: #185414;
@@ -67,6 +67,15 @@ body{
     align-self: center;
     margin: 4px 2px;
 }
+.text1{
+    width: 100%;
+    color: #4287f5;
+    font-family: "Monaco",sans-serif;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    margin: 4px 2px;
+}
 .header {
     width: 100%;
     overflow: hidden;
@@ -79,6 +88,7 @@ body{
 }
 .abc{
     border: 1px solid grey;
+    cursor: pointer;
 }
 .header h4 {
     margin-top: 17px;
