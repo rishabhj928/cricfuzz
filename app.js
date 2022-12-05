@@ -1,7 +1,7 @@
 require('dotenv').config()
 let express = require("express"),
     app = express(),
-    PORT = process.env.PORT,
+    PORT = process.env.PORT || 5000,
     path = require('path'),
     cricapi = require('cricapi'),
     bodyparser = require('body-parser'),
@@ -25,29 +25,32 @@ app.get('/about', (req, res) => {
 })
 
 app.get('/api/matches', (req, res) => {
-    let url = `http://cricapi.com/api/matches?apikey=${key}`
+    let url = `https://api.cricapi.com/v1/matches?apikey=${key}`
     request(url, { json: true }, (err, resp, body) => {
-        if (err) return res.json({
-            error: 1,
-            msg: err,
-        })
-        let data = body.matches.filter(match => {
+        if (body.status == "failure") {
+            delete body.apikey
+            return res.json({
+                status: 500,
+                msg: body,
+                matches: [],
+            })
+        }
+        let data = body.data.filter(match => {
             return match.matchStarted
         })
 
         let newData = data.map((element, index) => {
             return new Promise((resolve, reject) => {
-                let requrl = `http://cricapi.com/api/cricketScore?apikey=${key}&unique_id=${element.unique_id}`
+                let requrl = `https://api.cricapi.com/v1/match_info?apikey=${key}&offset=0&id=${element.id}`
                 request(requrl, { json: true }, (err, resp, body) => {
-                    element.score = body.score
-                    element.stat = body.stat
+                    element.matchData = body.data
                     resolve(element);
                 })
             });
         })
         Promise.all(newData).then(data => {
             res.json({
-                error: 0,
+                status: 200,
                 matches: data
             })
         })
