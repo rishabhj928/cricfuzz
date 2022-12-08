@@ -15,7 +15,7 @@ app.use(express.static('./public'))
 
 var key = process.env.API_KEY
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname + '/public/index.html'))
+    res.sendFile(path.resolve(__dirname + 'index.html'))
 })
 app.get('/contact', (req, res) => {
     res.sendFile(path.resolve(__dirname + '/public/contact.html'))
