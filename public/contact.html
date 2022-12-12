@@ -1,6 +1,7 @@
 <html>
 <head>
-    <title>Contact | Cricfuzz - Live Cricket Score</title>
+    <title>Contact | Cricfuzz | Live Cricket Score | Rishabh Jain</title>
+    <meta name="description" content="This website is all about cricket matches. It tells us the live cricket matches hapening around the world, and their live scores, exclusively developed by Mr. Rishabh Jain">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="style/script.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -9,10 +10,11 @@
 </head>
 <body>
     <div class="header">
-        <h2>Cricfuzz</h2>
+        <h2><a href="/">CricFuzz</a></h2>
         <div class="header-right">
             <h4 class="abc"><a href="/">Home</a></h4>
             <h4 class="abc"><a href="/about">About</a></h4>
+            <h4 class="abc"><a href="/contact">Contact</a></h4>
         </div>
     </div>
     <br><br><br>
@@ -24,8 +26,13 @@
         <h2 id="a1">Rishabh Jain</h2>
         <div class="container">
             <h4 class="text1">
-                I had sharpened my skills by working hard for years, gaining knowledge and building beautiful websites, and this is a real example. Connect with me on github <img src="images/github-logo.png" style="width: 25px;height: 25px;"> <a href="https://github.com/rishabhj928/" target="_blank"><b>here</b></a>
+                I had sharpened my skills by working hard for years, gaining knowledge and building beautiful websites, and this is a real example. Connect with me here:
             </h4>
+            <h4 class="text1">Github: <a href="https://github.com/rishabhj928/" target="_blank">https://github.com/rishabhj928/</a></h4>
+            <h4 class="text1">Leetcode: <a href="https://leetcode.com/rishabhj928/" target="_blank">https://leetcode.com/rishabhj928/</a></h4>
+            <h4 class="text1">Linkedin: <a href="https://www.linkedin.com/in/rishabhj928/" target="_blank">https://www.linkedin.com/in/rishabhj928/</a></h4>
+            <h4 class="text1">Facebook: <a href="https://www.facebook.com/rishabhjain200" target="_blank">https://www.facebook.com/rishabhjain200</a></h4>
+            <h4 class="text1">Instagram: <a href="https://www.instagram.com/rishabhj928/" target="_blank">https://www.instagram.com/rishabhj928/</a></h4>
         </div>
 
     </div>
@@ -33,9 +40,10 @@
     <div class="footer">
         <div class="container">
             <marquee>
-                <strong>&copy; Rishabh Jain</strong>
+                <strong>&copy; 2018 - <span id="cur_year"></span> Rishabh Jain</strong>
             </marquee>
         </div>
     </div>
+    <script>document.querySelector("#cur_year").innerHTML = new Date().getFullYear();</script>
 </body>
 </html>

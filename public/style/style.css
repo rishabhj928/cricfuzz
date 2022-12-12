@@ -3,6 +3,13 @@ body{
     margin: 0;
     padding: 0;
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: calc(100% - 80px) !important;
+    }
+}
+
 .card:hover{
     background-color: #84ad80;
 }
@@ -80,7 +87,7 @@ body{
     width: 100%;
     overflow: hidden;
     background-color: #d3cbcb;
-    height: 10%;
+    height: auto;
 }
 .header-right {
     margin-top: -65px;

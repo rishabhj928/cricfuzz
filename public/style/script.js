@@ -5,7 +5,7 @@ $.get('/api/matches').done(data => {
         let outerDiv = document.createElement('div'),
             cardHeader = document.createElement('div'),
             cardBody = document.createElement('div')
-        $(outerDiv).addClass('col-sm-8 card outerDiv bg-danger text-white')
+        $(outerDiv).addClass('col-sm-12 col-md-8 card outerDiv bg-danger text-white')
         $(cardHeader).addClass('card-header headerDiv text-white bg-danger').html(`${data.msg.status}`)
         $(cardBody).addClass('card-body text-white').html(`<pre class="m-0 text-white">${JSON.stringify(data.msg, null, 2)}</pre>`)
         let results = $('#matches .row')
@@ -17,7 +17,7 @@ $.get('/api/matches').done(data => {
             let outerDiv = document.createElement('div'),
                 cardHeader = document.createElement('div'),
                 cardBody = document.createElement('div')
-            $(outerDiv).addClass('col-sm-8 card outerDiv')
+            $(outerDiv).addClass('col-sm-12 col-md-8 card outerDiv')
 
             $(cardHeader).addClass('card-header headerDiv text').html(`${match.name}`)
             if (match.matchType.matchWinner != undefined) {

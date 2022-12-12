@@ -1,6 +1,7 @@
 <html>
 <head>
-    <title>Cricfuzz - Live Cricket Score</title>
+    <title>Cricfuzz | Live Cricket Score | Rishabh Jain</title>
+    <meta name="description" content="This website is all about cricket matches. It tells us the live cricket matches hapening around the world, and their live scores, exclusively developed by Mr. Rishabh Jain">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="style/script.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -9,10 +10,11 @@
 </head>
 <body>
     <div class="header">
-        <h2>Cricfuzz</h2>
+        <h2><a href="/">CricFuzz</a></h2>
         <div class="header-right">
-            <h4 class="abc"><a href="/contact">Contact</a></h4>
+            <h4 class="abc"><a href="/">Home</a></h4>
             <h4 class="abc"><a  href="/about">About</a></h4>
+            <h4 class="abc"><a href="/contact">Contact</a></h4>
         </div>
     </div>
     <br><br><br>
@@ -23,7 +25,7 @@
         <br>
         <div class="loader" id="h"></div>
         <div class="row">
-            <!-- <div class="col-sm-4 card">
+            <!-- <div class="col-sm-12 col-md-8 card">
                 <div class="card-header">Bangladesh Women Vs Ireland Women</div>
                 <div class="card-body">
                     WomensT20I
@@ -36,9 +38,10 @@
     <div class="footer">
         <div class="container">
             <marquee>
-                <strong>&copy; Rishabh Jain</strong>
+                <strong>&copy; 2018 - <span id="cur_year"></span> Rishabh Jain</strong>
             </marquee>
         </div>
     </div>
+    <script>document.querySelector("#cur_year").innerHTML = new Date().getFullYear();</script>
 </body>
 </html>
