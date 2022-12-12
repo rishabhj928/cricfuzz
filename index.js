@@ -35,9 +35,10 @@ app.get('/api/matches', (req, res) => {
                 matches: [],
             })
         }
-        let data = body.data.filter(match => {
-            return match.matchStarted
-        })
+        // let data = body.data.filter(match => {
+        //     return match.matchStarted
+        // })
+        let data = body.data
 
         let newData = data.map((element, index) => {
             return new Promise((resolve, reject) => {

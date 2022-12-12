@@ -25,11 +25,12 @@ $.get('/api/matches').done(data => {
             }
             
             let score = ""
-            match.score.forEach(sc => {
-                score += `${sc.inning}: ${sc.r}-${sc.w} (${sc.o}), `
-            });
-            score = score.slice(0, -2)
-
+            if(match.matchStarted) {
+                match.score.forEach(sc => {
+                    score += `${sc.inning}: ${sc.r}-${sc.w} (${sc.o}), `
+                });
+                score = score.slice(0, -2)
+            }
             $(cardBody).addClass('card-body text').
                 html(`
                     Match Type: ${match.matchType} <br> 
